@@ -1,7 +1,7 @@
 {
   "extends": "airbnb",
   "rules": {
-    "semi": [2, "never"],
+    "semi": ["error", "never"],
     "react/jsx-filename-extension": "off"
   }
 }
