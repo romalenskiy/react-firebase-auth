@@ -4,6 +4,7 @@ import { compose } from 'recompose'
 
 import { withFirebase } from '../Firebase'
 import { SignUpLink } from '../SignUp'
+import { PasswordForgetLink } from '../PasswordForget'
 
 import * as ROUTES from '../../constants/routes'
 
@@ -12,6 +13,7 @@ const SignInPage = () => (
   <div>
     <h1>SignIn</h1>
     <SignInFrom />
+    <PasswordForgetLink />
     <SignUpLink />
   </div>
 )
@@ -25,7 +27,7 @@ const INITIAL_STATE = {
 class SignInFromBase extends Component {
   constructor(props) {
     super(props)
-    this.state = INITIAL_STATE
+    this.state = { ...INITIAL_STATE }
   }
 
   onSubmit = (event) => {
